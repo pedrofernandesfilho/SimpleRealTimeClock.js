@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta chart="utf-8" />
+  <title>Simple Real Time Clock</title>
+</head>
+<body>
+  <header>
+    <h1>Simple Real Time Clock</h1>
+  </header>
+  <main>
+    <h3 id="clock"></h3>
+  </main>
+  <script src="src/simpleRealTimeClock.js"></script>
+  <script>
+    (function(){
+      var srtc = new SimpleRealTimeClock({ clockElementId: "clock" });
+    }());
+  </script>
+</body></html>
