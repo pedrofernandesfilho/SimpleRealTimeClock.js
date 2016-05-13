@@ -20,7 +20,7 @@
             // Options
             this.options = extend({
                 clockElementId: null,
-                culture: "en-US"
+                culture: null
             }, options);
 
             this.clockElement = doc.getElementById(this.options.clockElementId);
@@ -57,7 +57,10 @@
 
     function getCurrentDateTime(culture) {
         try {
-            return (new Date()).toLocaleString(culture);
+            if (culture)
+                return (new Date()).toLocaleString(culture);
+            else
+                return (new Date()).toLocaleString();
         } catch (ex) {
             throw ex;
         }
